@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V-Web</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+}
+
+.header {
+  background: #1877f2;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo { font-size: 24px; font-weight: bold; }
+
+.container { display: flex; }
+
+.sidebar, .rightbar {
+  width: 20%;
+  padding: 10px;
+}
+
+.feed { width: 60%; }
+
+.card {
+  background: white;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.post-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+button {
+  background: #1877f2;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.story, .reel {
+  background: #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 5px;
+  display: inline-block;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">V-Web</div>
+  <input type="text" placeholder="Search V-Web">
+</div>
+
+<div class="container">
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="card">Profile</div>
+  <div class="card">Friends</div>
+  <div class="card">Groups</div>
+  <div class="card">Marketplace</div>
+  <div class="card">Gaming</div>
+</div>
+
+<!-- Feed -->
+<div class="feed">
+
+  <!-- Create Post -->
+  <div class="card">
+    <input type="text" class="post-input" id="postText" placeholder="Share your thoughts or ideas">
+    <div class="actions">
+      <button onclick="goLive()">🔴 Go Live</button>
+      <button onclick="uploadPhoto()">📷 Upload</button>
+      <button onclick="addPost()">Post</button>
+    </div>
+  </div>
+
+  <!-- Stories -->
+  <div class="card">
+    <div class="section-title">Stories & Friends</div>
+    <div class="story">Your Story</div>
+    <div class="story">Friend 1</div>
+    <div class="story">Friend 2</div>
+  </div>
+
+  <!-- Posts -->
+  <div id="posts"></div>
+
+  <!-- Education Memos -->
+  <div class="card">
+    <div class="section-title">Latest Education Memos</div>
+    <p>📚 Exam updates, revision tips, school news...</p>
+  </div>
+
+  <!-- Reels -->
+  <div class="card">
+    <div class="section-title">Reels</div>
+    <div class="reel">🎥 Reel 1</div>
+    <div class="reel">🎥 Reel 2</div>
+  </div>
+
+  <!-- Marketplace -->
+  <div class="card">
+    <div class="section-title">Maseno Marketplace</div>
+    <p>Buy & sell items here</p>
+  </div>
+
+</div>
+
+<!-- Right Sidebar -->
+<div class="rightbar">
+  <div class="card">
+    <div class="section-title">Messenger</div>
+    <p>Chat with friends</p>
+    <input type="text" placeholder="Type message">
+  </div>
+
+  <div class="card">
+    <div class="section-title">Profile</div>
+    <p>Name: User</p>
+    <p>Thoughts: Hello world!</p>
+  </div>
+</div>
+
+</div>
+
+<script>
+function addPost() {
+  const text = document.getElementById('postText').value;
+  if(text.trim() === '') return;
+
+  const post = document.createElement('div');
+  post.className = 'card';
+  post.innerHTML = `<strong>User</strong><p>${text}</p>`;
+
+  document.getElementById('posts').prepend(post);
+  document.getElementById('postText').value = '';
+}
+
+function goLive() {
+  alert('Live feature coming soon!');
+}
+
+function uploadPhoto() {
+  alert('Upload feature coming soon!');
+}
+</script>
+
+</body>
+</html>
