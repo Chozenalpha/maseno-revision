@@ -1,95 +1,44 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0f172a, #1e3a8a);
-  color: white;
-}
-
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 30px;
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(10px);
-}
-
+/* LOGO */
 .logo {
-  font-size: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  animation: spin 6s linear infinite;
+}
+
+.logo-text {
+  font-size: 20px;
   font-weight: bold;
   color: #38bdf8;
 }
 
-.menu a {
-  margin-left: 20px;
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.menu a:hover {
-  color: #38bdf8;
-}
-
-/* HERO */
+/* BIG HERO LOGO */
 .hero {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 50px;
+  align-items: center;
+  padding: 40px;
 }
 
-.hero-text {
-  max-width: 50%;
-}
-
-.hero-text h1 {
-  font-size: 40px;
-}
-
-.hero-image img {
-  width: 400px;
-  border-radius: 15px;
+.big-logo {
+  width: 300px;
   animation: float 3s ease-in-out infinite;
 }
 
-/* FLOAT ANIMATION */
+/* ANIMATIONS */
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
-
-/* CARDS */
-.card {
-  margin: 30px;
-  padding: 20px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
-}
-
-/* INPUTS */
-input, textarea {
-  width: 100%;
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-}
-
-/* BUTTON */
-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: #38bdf8;
-  border: none;
-  border-radius: 10px;
-  color: black;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #0ea5e9;
+  0% { transform: translateY(0px);}
+  50% { transform: translateY(-10px);}
+  100% { transform: translateY(0px);}
 }
