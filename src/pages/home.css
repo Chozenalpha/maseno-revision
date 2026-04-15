@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.home {
+  background: linear-gradient(to bottom, #012d1b, #001a12);
+  color: white;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* HEADER */
+.header {
+  background: #0a3d26;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* SECTIONS */
+.section {
+  margin: 20px;
+  padding: 15px;
+  background: #06281a;
+  border-radius: 20px;
+}
+
+.section-title {
+  text-align: center;
+  color: #00c853;
+}
+
+/* ROW */
+.cards-row {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+/* CARD */
+.card {
+  min-width: 150px;
+  background: #02150e;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* HEADER WITH BUTTON */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  background: green;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.grid-item {
+  background: #02150e;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* CHAT CARD */
+.chat-card {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(to right, #0f5132, #2c5364);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* BOTTOM NAV */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: black;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
