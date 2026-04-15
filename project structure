@@ -1,0 +1,20 @@
+maseno-revision-app/
+│
+├── backend/
+│   ├── server.js
+│   ├── package.json
+│   ├── routes/
+│   │   ├── auth.js
+│   │   ├── posts.js
+│   │   ├── papers.js
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── Post.js
+│   │   ├── Paper.js
+│
+├── frontend/
+│   ├── index.html
+│   ├── app.js
+│   ├── style.css
+│
+└── README.md
