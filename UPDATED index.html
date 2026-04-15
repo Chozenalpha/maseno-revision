@@ -1,52 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Maseno X Revision</title>
-  <link rel="stylesheet" href="style.css">
-</head>
 
-<body>
-
-<!-- NAVBAR -->
 <nav class="navbar">
-  <div class="logo">🎓 MasenoX</div>
+  <div class="logo">
+    <img src="logo.png" class="logo-img">
+    <span class="logo-text">Maseno Revision</span>
+  </div>
+
   <div class="menu">
-    <a href="#">Home</a>
-    <a href="#">Papers</a>
-    <a href="#">Community</a>
+    <a href="index.html">Home</a>
+    <a href="vweb.html">V-Web</a>
+    <a href="login.html">Login</a>
   </div>
 </nav>
 
-<!-- HERO SECTION -->
 <section class="hero">
   <div class="hero-text">
-    <h1>Maseno Revision Platform</h1>
-    <p>Study smarter, connect faster, and access past papers easily.</p>
+    <h1>Maseno Revision Hub</h1>
+    <p>Download past papers and revision notes easily</p>
   </div>
-  <div class="hero-image">
-    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94" alt="students studying">
+
+  <div class="hero-logo">
+    <img src="logo.png" class="big-logo">
   </div>
 </section>
-
-<!-- SOCIAL SECTION -->
-<section class="card">
-  <h2>📢 V-Web Social</h2>
-  <textarea id="postContent" placeholder="Share something..."></textarea>
-  <button onclick="createPost()">Post</button>
-  <div id="posts"></div>
-</section>
-
-<!-- PAST PAPERS -->
-<section class="card">
-  <h2>📚 Past Papers</h2>
-  <input id="paperTitle" placeholder="Title">
-  <input id="paperCourse" placeholder="Course">
-  <input id="paperUrl" placeholder="File URL">
-  <button onclick="uploadPaper()">Upload</button>
-  <div id="papers"></div>
-</section>
-
-<script src="app.js"></script>
-</body>
-</html>
